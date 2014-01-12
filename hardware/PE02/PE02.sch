@@ -5283,10 +5283,10 @@ With round pins</description>
 <part name="GND" library="testpad" deviceset="TP" device="TP10R" value="TPTP10R"/>
 <part name="TP1" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
 <part name="TP2" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
-<part name="JP1" library="adafruit" deviceset="PINHD-1X1" device="CB"/>
+<part name="JP1" library="adafruit" deviceset="PINHD-1X1" device="CB" value="BUZZER"/>
 <part name="TP3" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
 <part name="TP4" library="t0mpr1c3" deviceset="SEWTAB" device=""/>
-<part name="JP2" library="adafruit" deviceset="PINHD-1X1" device="CB"/>
+<part name="JP2" library="adafruit" deviceset="PINHD-1X1" device="CB" value="VCC"/>
 <part name="MVS0608.02" library="rcl" deviceset="R-EU_" device="R1210"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun" deviceset="CAP" device="0805" value="1uF"/>
@@ -5335,7 +5335,7 @@ With round pins</description>
 <instance part="GND" gate="G$1" x="104.14" y="43.18"/>
 <instance part="TP1" gate="G$1" x="-30.48" y="50.8" rot="R180"/>
 <instance part="TP2" gate="G$1" x="-30.48" y="48.26" rot="R180"/>
-<instance part="JP1" gate="G$1" x="86.36" y="73.66" rot="R270"/>
+<instance part="JP1" gate="G$1" x="43.18" y="78.74" rot="R270"/>
 <instance part="TP3" gate="G$1" x="-30.48" y="35.56" rot="R180"/>
 <instance part="TP4" gate="G$1" x="-30.48" y="38.1" rot="R180"/>
 <instance part="JP2" gate="G$1" x="30.48" y="78.74" rot="R270"/>
@@ -5409,10 +5409,7 @@ With round pins</description>
 <pinref part="IC1" gate="G$1" pin="12"/>
 <label x="71.12" y="60.96" size="1.778" layer="95"/>
 <wire x1="78.74" y1="60.96" x2="78.74" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="60.96" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="60.96" x2="86.36" y2="76.2" width="0.1524" layer="91"/>
 <junction x="78.74" y="60.96"/>
 </segment>
 </net>
@@ -5501,16 +5498,14 @@ With round pins</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="4"/>
 <pinref part="D3" gate="LED" pin="C"/>
-<wire x1="24.13" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="24.13" y1="58.42" x2="20.32" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="58.42" x2="7.62" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="3"/>
-<wire x1="24.13" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="D2" gate="LED" pin="C"/>
-<wire x1="12.7" y1="60.96" x2="12.7" y2="63.5" width="0.1524" layer="91"/>
+<junction x="20.32" y="58.42"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="81.28" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="73.66" x2="20.32" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="58.42" x2="20.32" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -5625,6 +5620,14 @@ With round pins</description>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="SUPPLY4" gate="1" pin="V+"/>
 <wire x1="-7.62" y1="86.36" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="D2" gate="LED" pin="C"/>
+<pinref part="IC1" gate="G$1" pin="3"/>
+<wire x1="24.13" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="60.96" x2="12.7" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -136,7 +136,7 @@
 <wire x1="55.245" y1="43.97375" x2="46.355" y2="43.97375" width="0" layer="20" curve="-127.501235"/>
 <wire x1="55.245" y1="67.78625" x2="55.245" y2="43.97375" width="0" layer="20" curve="-139.055441"/>
 <wire x1="46.355" y1="43.97375" x2="46.355" y2="67.78625" width="0" layer="20" curve="-139.055441"/>
-<text x="60.759584375" y="56.962790625" size="0.8128" layer="21" font="vector" ratio="15">VCC</text>
+<text x="61.095415625" y="54.94595625" size="0.8128" layer="21" font="vector" ratio="15" rot="R90">VCC</text>
 <text x="49.53" y="44.7675" size="0.8128" layer="21" font="vector" ratio="15">PE02</text>
 <rectangle x1="46.56155" y1="56.02903125" x2="46.84095" y2="56.04173125" layer="21" rot="R90"/>
 <rectangle x1="46.42185" y1="56.02903125" x2="46.95525" y2="56.04173125" layer="21" rot="R90"/>
@@ -3712,14 +3712,10 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$1" library="SparkFun" package="OSHW-LOGO-S" value="" x="50.8" y="48.895" rot="MR0"/>
 <element name="TP1" library="adafruit" package="SEWINGTAP_0.4" value="SEWTAP0.4IN" x="50.8" y="69.215"/>
 <element name="TP2" library="adafruit" package="SEWINGTAP_0.4" value="SEWTAP0.4IN" x="50.8" y="69.215" rot="MR0"/>
-<element name="JP1" library="adafruit" package="1X01-CLEANBIG" value="" x="39.52875" y="55.88" smashed="yes">
-<attribute name="VALUE" x="38.25875" y="52.705" size="1.27" layer="27"/>
-</element>
+<element name="JP1" library="adafruit" package="1X01-CLEANBIG" value="BUZZER" x="39.52875" y="55.88" smashed="yes"/>
 <element name="TP3" library="adafruit" package="SEWINGTAP_0.4" value="SEWTAP0.4IN" x="50.8" y="42.545" rot="MR180"/>
 <element name="TP4" library="t0mpr1c3" package="SEWTAP_CUSTOM" value="SEWTAB" x="50.8" y="42.545" rot="R180"/>
-<element name="JP2" library="adafruit" package="1X01-CLEANBIG" value="" x="62.23" y="55.88" smashed="yes">
-<attribute name="VALUE" x="60.96" y="52.705" size="1.27" layer="27"/>
-</element>
+<element name="JP2" library="adafruit" package="1X01-CLEANBIG" value="VCC" x="62.23" y="55.88" smashed="yes"/>
 <element name="MVS0608.02" library="rcl" package="R1210" value="" x="50.8" y="48.26" smashed="yes">
 <attribute name="VALUE" x="48.26" y="45.085" size="1.27" layer="27"/>
 </element>
@@ -3805,7 +3801,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="IC1" pad="13"/>
 <contactref element="MVS0608.02" pad="2"/>
 <contactref element="IC1" pad="12"/>
-<contactref element="JP1" pad="1"/>
 <via x="52.07" y="56.515" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="53.975" y1="55.88" x2="53.7" y2="55.895" width="0.254" layer="1"/>
 <wire x1="45.085" y1="56.515" x2="52.07" y2="56.515" width="0.254" layer="16"/>
@@ -3817,7 +3812,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="51.1175" y1="55.5625" x2="52.07" y2="56.515" width="0.254" layer="1"/>
 <wire x1="45.085" y1="56.515" x2="43.815" y2="57.785" width="0.254" layer="16"/>
 <wire x1="43.815" y1="57.785" x2="42.545" y2="57.785" width="0.254" layer="16"/>
-<wire x1="42.545" y1="57.785" x2="39.52875" y2="55.88" width="0.254" layer="16"/>
 </signal>
 <signal name="VCC">
 <contactref element="IC1" pad="1"/>
@@ -3895,17 +3889,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="47.8999" y1="55.245" x2="45.72" y2="55.245" width="0.254" layer="1"/>
 <wire x1="45.72" y1="55.245" x2="43.02125" y2="56.515" width="0.254" layer="1"/>
 <via x="43.02125" y="56.515" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="43.02125" y1="56.515" x2="39.99524375" y2="52.767075" width="0.254" layer="16"/>
-</signal>
-<signal name="N$7">
-<contactref element="IC1" pad="3"/>
-<contactref element="D2" pad="K"/>
-<wire x1="47.8999" y1="55.895" x2="46.34" y2="55.895" width="0.254" layer="1"/>
-<wire x1="46.34" y1="55.895" x2="45.24375" y2="56.8325" width="0.254" layer="1"/>
-<wire x1="45.24375" y1="56.8325" x2="45.24375" y2="58.26125" width="0.254" layer="1"/>
-<via x="45.24375" y="58.26125" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="45.24375" y1="58.26125" x2="44.45" y2="59.055" width="0.254" layer="16"/>
-<wire x1="44.45" y1="59.055" x2="39.99524375" y2="58.992921875" width="0.254" layer="16"/>
+<contactref element="JP1" pad="1"/>
+<wire x1="39.52875" y1="55.88" x2="39.99524375" y2="52.767075" width="0.254" layer="16"/>
+<wire x1="39.52875" y1="55.88" x2="43.02125" y2="56.515" width="0.254" layer="16"/>
 </signal>
 <signal name="N$8">
 <contactref element="IC1" pad="2"/>
@@ -4024,6 +4010,16 @@ Please make sure your boards conform to these design rules.</description>
 <via x="54.61" y="52.07" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="56.86645625" y1="49.813540625" x2="54.61" y2="52.07" width="0.254" layer="1"/>
 <wire x1="54.61" y1="52.07" x2="54.61" y2="59.69" width="0.254" layer="16"/>
+</signal>
+<signal name="N$12">
+<contactref element="IC1" pad="3"/>
+<contactref element="D2" pad="K"/>
+<wire x1="47.8999" y1="55.895" x2="46.34" y2="55.895" width="0.254" layer="1"/>
+<wire x1="46.34" y1="55.895" x2="45.24375" y2="56.8325" width="0.254" layer="1"/>
+<wire x1="45.24375" y1="56.8325" x2="45.24375" y2="58.26125" width="0.254" layer="1"/>
+<via x="45.24375" y="58.26125" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="45.24375" y1="58.26125" x2="44.45" y2="59.055" width="0.254" layer="16"/>
+<wire x1="44.45" y1="59.055" x2="39.99524375" y2="58.992921875" width="0.254" layer="16"/>
 </signal>
 </signals>
 </board>
