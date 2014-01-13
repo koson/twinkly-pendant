@@ -5183,51 +5183,51 @@ With round pins</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="t0mpr1c3">
+<library name="con-molex-pico-ezmate">
 <packages>
-<package name="SEWTAP_CUSTOM">
-<description>Custom sewtap for twinkly pendant</description>
-<pad name="TAP" x="0" y="0" drill="1.2" diameter="2.1844"/>
-<polygon width="0.127" layer="1">
-<vertex x="-1.27" y="1.0922"/>
-<vertex x="-1.27" y="-1.397"/>
-<vertex x="4.445" y="-1.397" curve="76"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="-1.74625" y="-1.397"/>
-<vertex x="-2.54" y="-1.397"/>
-<vertex x="-2.54" y="0.5461" curve="-9.76"/>
-<vertex x="-1.74625" y="0.9271"/>
-</polygon>
-<polygon width="0.127" layer="29">
-<vertex x="-1.74625" y="-1.397"/>
-<vertex x="-2.54" y="-1.397"/>
-<vertex x="-2.54" y="0.5461" curve="-9.76"/>
-<vertex x="-1.74625" y="0.9271"/>
-</polygon>
-<polygon width="0.127" layer="29">
-<vertex x="-1.27" y="1.0922"/>
-<vertex x="-1.27" y="-1.397"/>
-<vertex x="4.445" y="-1.397" curve="76"/>
-</polygon>
+<package name="78171-0002">
+<wire x1="-2.1" y1="2.15" x2="2.1" y2="2.15" width="0.127" layer="51"/>
+<wire x1="2.1" y1="2.15" x2="2.1" y2="-2.35" width="0.127" layer="51"/>
+<wire x1="2.1" y1="-2.35" x2="0.75" y2="-2.35" width="0.127" layer="51"/>
+<wire x1="0.75" y1="-2.35" x2="0.25" y2="-1.85" width="0.127" layer="51"/>
+<wire x1="0.25" y1="-1.85" x2="-0.25" y2="-1.85" width="0.127" layer="51"/>
+<wire x1="-0.25" y1="-1.85" x2="-0.75" y2="-2.35" width="0.127" layer="51"/>
+<wire x1="-0.75" y1="-2.35" x2="-2.1" y2="-2.35" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="-2.35" x2="-2.1" y2="2.15" width="0.127" layer="51"/>
+<smd name="LEFT" x="-1.75" y="-1.7" dx="0.7" dy="0.8" layer="1"/>
+<smd name="RIGHT" x="1.75" y="-1.7" dx="0.7" dy="0.8" layer="1"/>
+<smd name="1" x="-0.6" y="2.075" dx="0.6" dy="0.85" layer="1"/>
+<smd name="2" x="0.6" y="2.075" dx="0.6" dy="0.85" layer="1"/>
+<text x="-3.2" y="3" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.4" y="-4.2" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
-<symbol name="SEWTAB">
-<description>Sewtab</description>
-<text x="0" y="2.54" size="1.27" layer="95" font="vector" rot="R180">&gt;NAME</text>
-<pin name="SEW" x="0" y="0" visible="off" length="middle" rot="R180"/>
+<symbol name="MV">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="M">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SEWTAB" prefix="TP">
+<deviceset name="78171-0002" prefix="J">
+<description>&lt;b&gt;CONNECTOR&lt;/b&gt;&lt;p&gt;
+wire to board 2.54 mm (.1 inch) pitch header</description>
 <gates>
-<gate name="G$1" symbol="SEWTAB" x="-2.54" y="10.16"/>
+<gate name="-1" symbol="MV" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
 </gates>
 <devices>
-<device name="" package="SEWTAP_CUSTOM">
+<device name="" package="78171-0002">
 <connects>
-<connect gate="G$1" pin="SEW" pad="TAP"/>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5270,12 +5270,12 @@ With round pins</description>
 <part name="SUPPLY3" library="supply2" deviceset="V+" device=""/>
 <part name="+3V3" library="supply2" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="56"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="56"/>
 <part name="SUPPLY4" library="supply2" deviceset="V+" device=""/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="56"/>
 <part name="SUPPLY5" library="supply2" deviceset="V+" device=""/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="56"/>
 <part name="SUPPLY6" library="supply2" deviceset="V+" device=""/>
 <part name="VCC" library="testpad" deviceset="TP" device="TP10R" value="TPTP10R"/>
 <part name="TST" library="testpad" deviceset="TP" device="TP10R" value="TPTP10R"/>
@@ -5284,12 +5284,10 @@ With round pins</description>
 <part name="TP1" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
 <part name="TP2" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
 <part name="JP1" library="adafruit" deviceset="PINHD-1X1" device="CB" value="BUZZER"/>
-<part name="TP3" library="adafruit" deviceset="SEWTAP" device="0.4IN"/>
-<part name="TP4" library="t0mpr1c3" deviceset="SEWTAB" device=""/>
-<part name="JP2" library="adafruit" deviceset="PINHD-1X1" device="CB" value="VCC"/>
-<part name="MVS0608.02" library="rcl" deviceset="R-EU_" device="R1210"/>
+<part name="MVS0608.02" library="rcl" deviceset="R-EU_" device="R1210" value="VIBRATION SENSOR"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun" deviceset="CAP" device="0805" value="1uF"/>
+<part name="J1" library="con-molex-pico-ezmate" deviceset="78171-0002" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5336,12 +5334,11 @@ With round pins</description>
 <instance part="TP1" gate="G$1" x="-30.48" y="50.8" rot="R180"/>
 <instance part="TP2" gate="G$1" x="-30.48" y="48.26" rot="R180"/>
 <instance part="JP1" gate="G$1" x="43.18" y="78.74" rot="R270"/>
-<instance part="TP3" gate="G$1" x="-30.48" y="35.56" rot="R180"/>
-<instance part="TP4" gate="G$1" x="-30.48" y="38.1" rot="R180"/>
-<instance part="JP2" gate="G$1" x="30.48" y="78.74" rot="R270"/>
 <instance part="MVS0608.02" gate="G$1" x="78.74" y="48.26" rot="R90"/>
 <instance part="GND5" gate="1" x="78.74" y="33.02"/>
 <instance part="C1" gate="G$1" x="-20.32" y="73.66"/>
+<instance part="J1" gate="-1" x="-30.48" y="45.72"/>
+<instance part="J1" gate="-2" x="-30.48" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -5367,18 +5364,6 @@ With round pins</description>
 <junction x="71.12" y="66.04"/>
 </segment>
 <segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="-33.02" y1="38.1" x2="-33.02" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-33.02" y="35.56"/>
-<wire x1="-33.02" y1="35.56" x2="-33.02" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="TP3" gate="G$1" pin="SEW"/>
-<wire x1="-30.48" y1="35.56" x2="-33.02" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="TP4" gate="G$1" pin="SEW"/>
-<wire x1="-30.48" y1="38.1" x2="-33.02" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="38.1" x2="-33.02" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-33.02" y="38.1"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="A" pin="GND"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-25.4" y1="68.58" x2="-20.32" y2="68.58" width="0.1524" layer="91"/>
@@ -5397,6 +5382,11 @@ With round pins</description>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="MVS0608.02" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="35.56" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-33.02" y1="40.64" x2="-33.02" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="J1" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="VIB" class="0">
@@ -5431,12 +5421,7 @@ With round pins</description>
 <pinref part="IC1" gate="G$1" pin="1"/>
 <wire x1="24.13" y1="66.04" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="VCC"/>
-<wire x1="22.86" y1="83.82" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="76.2" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="81.28" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
-<junction x="22.86" y="76.2"/>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="83.82" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -5586,10 +5571,11 @@ With round pins</description>
 <wire x1="-33.02" y1="50.8" x2="-33.02" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="50.8" x2="-33.02" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="TP1" gate="G$1" pin="SEW"/>
-<junction x="-33.02" y="48.26"/>
-<wire x1="-33.02" y1="48.26" x2="-33.02" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="TP2" gate="G$1" pin="SEW"/>
 <wire x1="-30.48" y1="48.26" x2="-33.02" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="45.72" x2="-33.02" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-33.02" y="48.26"/>
+<pinref part="J1" gate="-1" pin="S"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="A" pin="VIN"/>
