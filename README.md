@@ -18,3 +18,4 @@ Initial prototype with SMD LEDs.
 _PE02_
 
 Second prototype with through-hole LEDs.
+Buzzer circuit requires 39 uH inductor in parallel with piezo diaphragm.

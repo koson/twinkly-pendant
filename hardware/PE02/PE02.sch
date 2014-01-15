@@ -5062,6 +5062,130 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="transistor">
+<description>&lt;b&gt;NPN Transistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SOT23">
+<description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
+<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BC846" prefix="T">
+<description>&lt;b&gt;NPN TRANSISTOR&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="adafruit">
+<packages>
+<package name="1X01">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.9304" shape="octagon"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
+<package name="1X01-CLEANBIG">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.778"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PINHD1">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PINHD-1X1" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;Pin header 1x1 for 0.1" spacing&lt;/b&gt;
+&lt;p&gt;
+With round pins</description>
+<gates>
+<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X01">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CB" package="1X01-CLEANBIG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5110,6 +5234,11 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun" deviceset="CAP" device="0805" value="1uF"/>
 <part name="J1" library="con-molex-pico-ezmate" deviceset="78171-0002" device=""/>
+<part name="T1" library="transistor" deviceset="BC846" device=""/>
+<part name="JP1" library="adafruit" deviceset="PINHD-1X1" device="CB"/>
+<part name="JP2" library="adafruit" deviceset="PINHD-1X1" device="CB"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="1K"/>
 </parts>
 <sheets>
 <sheet>
@@ -5158,6 +5287,11 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <instance part="C1" gate="G$1" x="-20.32" y="73.66"/>
 <instance part="J1" gate="-1" x="-30.48" y="45.72"/>
 <instance part="J1" gate="-2" x="-30.48" y="40.64"/>
+<instance part="T1" gate="G$1" x="45.72" y="81.28"/>
+<instance part="JP1" gate="G$1" x="48.26" y="91.44" rot="R270"/>
+<instance part="JP2" gate="G$1" x="-43.18" y="88.9" rot="R270"/>
+<instance part="GND6" gate="1" x="48.26" y="73.66"/>
+<instance part="R6" gate="G$1" x="35.56" y="81.28" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5206,6 +5340,10 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="-33.02" y1="40.64" x2="-33.02" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="J1" gate="-2" pin="S"/>
+</segment>
+<segment>
+<pinref part="T1" gate="G$1" pin="E"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VIB" class="0">
@@ -5378,11 +5516,16 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <pinref part="IC2" gate="A" pin="VIN"/>
 <pinref part="SUPPLY3" gate="1" pin="V+"/>
 <wire x1="-48.26" y1="78.74" x2="-50.8" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="78.74" x2="-50.8" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="78.74" x2="-50.8" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="ON"/>
+<wire x1="-50.8" y1="83.82" x2="-50.8" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="73.66" x2="-50.8" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="73.66" x2="-50.8" y2="78.74" width="0.1524" layer="91"/>
 <junction x="-50.8" y="78.74"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="-43.18" y1="91.44" x2="-43.18" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="83.82" x2="-50.8" y2="83.82" width="0.1524" layer="91"/>
+<junction x="-50.8" y="83.82"/>
 </segment>
 <segment>
 <pinref part="SUPPLY1" gate="1" pin="V+"/>
@@ -5417,8 +5560,28 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <segment>
 <pinref part="D3" gate="LED" pin="C"/>
 <pinref part="IC1" gate="G$1" pin="4"/>
-<wire x1="24.13" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="24.13" y1="58.42" x2="20.32" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="58.42" x2="7.62" y2="60.96" width="0.1524" layer="91"/>
+<junction x="20.32" y="58.42"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="20.32" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="58.42" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BUZZER" class="0">
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="T1" gate="G$1" pin="C"/>
+<wire x1="48.26" y1="93.98" x2="48.26" y2="86.36" width="0.1524" layer="91"/>
+<label x="53.34" y="86.36" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="T1" gate="G$1" pin="B"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="81.28" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
