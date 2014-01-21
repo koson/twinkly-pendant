@@ -1,5 +1,8 @@
-// Clock frequency
-static const uint16_t F_DCOCLK = 96000;
+#if !defined TWINKLY_H
+#define      TWINKLY_H
+
+#include <msp430.h>
+#include <stdint.h>
 
 // Port1 LEDs
 #define LED1	BIT0
@@ -15,3 +18,8 @@ static const uint16_t F_DCOCLK = 96000;
 // Port2 sensor
 #define VIB	BIT6
 #define VIB_PULLUP	BIT7
+
+// Clock frequency
+#define F_DCOCLK 4000000
+
+#endif
