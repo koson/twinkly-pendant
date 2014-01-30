@@ -19,3 +19,4 @@ _PE02_
 
 Second prototype with through-hole LEDs.
 Buzzer circuit requires 39 mH inductor in parallel with piezo diaphragm.
+3 PCBs ordered from OSHpark.
